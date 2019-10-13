@@ -9,7 +9,7 @@ import os
 os.chdir('C:\\Users\\gordon.garisch\\Documents\\Projects\\Stevens\\fe595\\FE595_Assignment3')
 
 from textblob import TextBlob
-from data_cleaning import cleanTFC
+from part1_data_cleaning import cleanTFC
 import pprint
 
 # =============================================================================
