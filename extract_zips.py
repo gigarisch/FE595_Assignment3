@@ -23,8 +23,6 @@ class Extractor(object):
         if extract:
             for zfn in glob(os.path.join(self.input_dir, '*.zip')):
                 # Lookp through zip files in input location
-                
-               
     
                 # Create folder if it does not exist
                 if not os.path.exists(report_path):
@@ -40,12 +38,16 @@ class Extractor(object):
                 print('extracted {} reports to {}'.format(count, report_path))
         
         if consolidate:
+            count = 0
             # Loop through folders, searching for .txt files to consolidate
             for subdir, dirs, files in os.walk(temp_path):
-                for txtfl in glob(os.path.join(temp_path, '*.txt')):
+                files = glob(os.path.join(temp_path, '*.txt')) + glob(os.path.join(temp_path, '*.csv'))
+                for txtfl in files:
                     finp = open(txtfl,"r")
                     foutp = open(os.path.join(report_path,'output.txt'),"a+")
-                    foutp.write(finp.read())                
+                    foutp.write(finp.read())
+                    count += 1
+                    print('{}. Extracted {} '.format(count,finp.name))
 
 
 if '__main__' == __name__:    
@@ -62,4 +64,4 @@ if '__main__' == __name__:
     # =============================================================================
     # Extract function
     # =============================================================================
-    extractor.extract(extract = False)
+    extractor.extract()
