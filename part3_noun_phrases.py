@@ -47,3 +47,16 @@ pprint.pprint(["Descriptor / Noun Phrase: \"{}\" has {} occurrences."
                for (key, value) in 
                reversed(sorted(nps.items(), key=lambda x: x[1])[-10:])])
 
+# =============================================================================
+# Output from last run:
+# ['Descriptor / Noun Phrase: "wrong side" has 21 occurrences.',
+# 'Descriptor / Noun Phrase: "satanic" has 13 occurrences.',
+# 'Descriptor / Noun Phrase: "wrong crowd" has 13 occurrences.',
+# 'Descriptor / Noun Phrase: "god" has 13 occurrences.',
+# 'Descriptor / Noun Phrase: "true killer" has 12 occurrences.',
+# 'Descriptor / Noun Phrase: "wife \'s" has 12 occurrences.',
+# 'Descriptor / Noun Phrase: "late maiden aunt" has 11 occurrences.',
+# 'Descriptor / Noun Phrase: "incredible destiny" has 11 occurrences.',
+# 'Descriptor / Noun Phrase: "mississippi" has 11 occurrences.',
+# 'Descriptor / Noun Phrase: "secret government programme" has 11 occurrences.']
+# =============================================================================
