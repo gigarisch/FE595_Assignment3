@@ -54,7 +54,7 @@ if '__main__' == __name__:
     # =============================================================================
     # Set inpput, output and temp file locations
     # =============================================================================
-    input_dir = ('C:\\Users\\gordon.garisch\\Documents\\Projects\\Stevens\\fe595\\FE595_Assignment3\\data\\')
+    input_dir = os.path.join(os.getcwd(),'data')
     output_dir = os.path.join(input_dir,'output')
     temp_dir = os.path.join(input_dir,'temp')
     # =============================================================================
