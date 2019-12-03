@@ -18,7 +18,8 @@ def top_output(they_dict, top=10, best=False, key='pol'):
     # Identify IDs sorted by polarity
     # =============================================================================
     assert key in they_dict.keys(), 'Provided key not in dictionary'
-    assert top <= len(they_dict[key]), 'Provided key not in dictionary'
+    assert top <= len(they_dict[key]), '"top" is larger than the number of entries '
+    
     they_sort=sorted(range(len(they_dict[key])),
                      key=lambda k: they_dict[key][k],reverse=best)
     
